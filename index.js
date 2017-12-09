@@ -62,7 +62,7 @@ function viewCart() {
         console.log(`In your cart, you have ${itemsAndPrices}.`);
       }
 
-    }}/*
+    }}}/*
   for (let i = 0; i < l; i++) {
     let itemAndPrice = cart[i];
     let item = Object.keys(itemAndPrice)[0];

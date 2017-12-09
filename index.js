@@ -35,7 +35,7 @@ function viewCart() {
 
       for (let i = 0; i < l; i++) {
     let cartList = cart[i];
-    let cartList = Object.keys(cartList)[0];
+    let item = Object.keys(cartList)[0];
     let price = cartList[item];
 
     cartList.push(`${item} at $${price}`);

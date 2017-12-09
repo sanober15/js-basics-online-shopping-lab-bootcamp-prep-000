@@ -29,7 +29,8 @@ function viewCart() {
   // write your code here
   if (cart.length <= 0) {
         console.log("Your shopping cart is empty.");
-    }else {
+    }
+    
       let cartList = [];
       const l = cart.length;
   for (let i = 0; i < l; i++) {
@@ -48,7 +49,7 @@ function viewCart() {
     default:
       cartList[l-1] = "and ".concat(cartList[l-1]);
       cartList = cartList.join(", ");
-  }
+  
 
   console.log(`In your cart, you have ${cartList}.`);
 }

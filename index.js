@@ -31,54 +31,32 @@ function viewCart() {
         console.log("Your shopping cart is empty.");
     }
 const l = cart.length
-let cartList = [];
+let itemsAndPrices = [];
 
-for (let i = 0; i < l; i++) {
-let cartList = cart[i];
-let item = Object.keys(cartList)[0];
-let price = cartList[item];
+  for (let i = 0; i < l; i++) {
+    let itemAndPrice = cart[i];
+    let item = Object.keys(itemAndPrice)[0];
+    let price = itemAndPrice[item];
 
-cartList.push(`${item} at \$${price}`);
+    itemsAndPrices.push(`${item} at \$${price}`);
+  }
+
+  switch(itemsAndPrices.length) {
+    case 1:
+      break;
+    case 2:
+      itemsAndPrices = itemsAndPrices.join(" and ");
+      break;
+    default:
+      itemsAndPrices[l-1] = "and ".concat(itemsAndPrices[l-1]);
+      itemsAndPrices = itemsAndPrices.join(", ");
+  }
+
+  console.log(`In your cart, you have ${itemsAndPrices}.`);
 }
 
-switch(cartList.length) {
-case 1:
-break;
-case 2:
-cartList = cartList.join(" and ");
-break;
-default:
-cartList[l-1] = "and ".concat(cartList[l-1]);
-cartList = cartList.join(", ");
-}
 
-console.log(`In your cart, you have ${cartList}.`);
-}
 
-/*
-      var itemContents = [];
-      var x = 1;
-               for (var i = 0; i < cart.length; i++) {
-                   var item = Object.keys(cart[i])[0];
-                   if ( x === cart.length ) {
-                   itemContents.push(`${item} at $${cart[i][item]}`);
-               }
-
-               switch(itemContents.length) {
-                  case 1:
-                    break;
-                  case 2:
-                    itemContents = itemsContents.join(" and ");
-                    break;
-                  default:
-                    itemContents[cart.length -1] = "and ".concat(itemContents[cart.length-1]);
-                    itemContents = itemContents.join(", ");
-                }
-
-}         console.log("In your cart, you have " + itemContents.join(", ") + ".");
-        }}
-
-*/
 function total() {
   // write your code here
   cart;

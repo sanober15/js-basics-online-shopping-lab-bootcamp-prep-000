@@ -37,7 +37,7 @@ function viewCart() {
     let item = Object.keys(cartList)[0];
     let price = cartList[item];
 
-    cartList.push(`${item} at $${price}`);
+    cartList = cartList.push(`${item} at $${price}`);
   }
   switch(cartList.length) {
     case 1:

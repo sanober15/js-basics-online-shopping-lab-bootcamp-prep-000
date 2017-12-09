@@ -52,7 +52,7 @@ function viewCart() {
 
   console.log(`In your cart, you have ${cartList}.`);
 }
-
+}
 
 /*
       var itemContents = [];

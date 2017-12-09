@@ -35,7 +35,7 @@ const l = cart.length;
 
       for (let i = 0; i < l; i++) {
     let cartList = cart[i];
-    let item = Object.keys(cartList)[0];
+    let item = Object.keys(cart)[0];
     let price = cartList[item];
 
     cartList.push(`${item} at $${price}`);

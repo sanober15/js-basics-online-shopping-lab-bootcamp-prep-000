@@ -31,28 +31,28 @@ function viewCart() {
         console.log("Your shopping cart is empty.");
     }
 const l = cart.length
-let itemsAndPrices = [];
+let cl = [];
 
   for (let i = 0; i < l; i++) {
-    let itemAndPrice = cart[i];
-    let item = Object.keys(itemAndPrice)[0];
-    let price = itemAndPrice[item];
+    let cl = cart[i];
+    let item = Object.keys(cl)[0];
+    let price = cl[item];
 
-    itemsAndPrices.push(`${item} at \$${price}`);
+    cl.push(`${item} at \$${price}`);
   }
 
-  switch(itemsAndPrices.length) {
+  switch(cl.length) {
     case 1:
       break;
     case 2:
-      itemsAndPrices = itemsAndPrices.join(" and ");
+      cl = cl.join(" and ");
       break;
     default:
-      itemsAndPrices[l-1] = "and ".concat(itemsAndPrices[l-1]);
-      itemsAndPrices = itemsAndPrices.join(", ");
+      cl[l-1] = "and ".concat(cl[l-1]);
+      cl = cl.join(", ");
   }
 
-  console.log(`In your cart, you have ${itemsAndPrices}.`);
+  console.log(`In your cart, you have ${cl}.`);
 }
 
 

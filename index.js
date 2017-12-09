@@ -18,6 +18,7 @@ function getRandomInt(min, max){
   return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 
+var price = getRandomInt(1,100);
   cart.push({[item]: price});
 
 console.log(`${item} has been added to your cart.`);
@@ -29,15 +30,15 @@ function viewCart() {
   if (cart.length <= 0) {
         console.log("Your shopping cart is empty.");
     }
-
+    
       let cartList = [];
-      const l = cart.length;
+
   for (let i = 0; i < l; i++) {
     let cartList = cart[i];
-    let item = Object.keys(cartList)[0];
+    let cartList = Object.keys(itemAndPrice)[0];
     let price = cartList[item];
 
-    cartList.push(`${item} at \$${price}`);
+    cartList.push(`${item} at $${price}`);
   }
   switch(cartList.length) {
     case 1:
@@ -48,11 +49,10 @@ function viewCart() {
     default:
       cartList[l-1] = "and ".concat(cartList[l-1]);
       cartList = cartList.join(", ");
-
+  }
 
   console.log(`In your cart, you have ${cartList}.`);
-}
-}
+}}
 
 
 /*

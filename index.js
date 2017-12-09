@@ -37,21 +37,20 @@ function viewCart() {
     let cartList = Object.keys(itemAndPrice)[0];
     let price = cartList[item];
 
-    itemsAndPrices.push(`${item} at $${price}`);
+    cartList.push(`${item} at $${price}`);
   }
-
-  switch(itemsAndPrices.length) {
+  switch(cartList.length) {
     case 1:
       break;
     case 2:
-      itemsAndPrices = itemsAndPrices.join(" and ");
+      cartList = cartList.join(" and ");
       break;
     default:
-      itemsAndPrices[l-1] = "and ".concat(itemsAndPrices[l-1]);
-      itemsAndPrices = itemsAndPrices.join(", ");
+      cartList[l-1] = "and ".concat(cartList[l-1]);
+      cartList = cartList.join(", ");
   }
 
-  console.log(`In your cart, you have ${itemsAndPrices}.`);
+  console.log(`In your cart, you have ${cartList}.`);
 }
 
 

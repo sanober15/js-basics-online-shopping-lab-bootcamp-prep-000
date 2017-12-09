@@ -40,7 +40,7 @@ function viewCart() {
             var cartList = [];
             const l = cart.length;
             for (let i = 0; i < l; i++) {
-              var item = Object.keys(cart[i])[0];
+              var item = Object.keys(cart[i])[item];
           //    let cartList = cart[i];
             //  let item = Object.keys(cartList)[0];
       //        let price = itemAndPrice[item];

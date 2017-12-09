@@ -63,6 +63,14 @@ function viewCart() {
       }
 
     }}/*
+
+function viewCart() {
+  // write your code here
+  if (cart.length <= 0) {
+        console.log("Your shopping cart is empty.");
+    }else {
+      let itemsAndPrices = [];
+
   for (let i = 0; i < l; i++) {
     let itemAndPrice = cart[i];
     let item = Object.keys(itemAndPrice)[0];

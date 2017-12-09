@@ -18,7 +18,6 @@ function getRandomInt(min, max){
   return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 
-var price = getRandomInt(1,100);
   cart.push({[item]: price});
 
 console.log(`${item} has been added to your cart.`);

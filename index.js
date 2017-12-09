@@ -30,30 +30,30 @@ function viewCart() {
   if (cart.length <= 0) {
         console.log("Your shopping cart is empty.");
     }
-const l = cart.length;
-      let cartList = [];
+const l = cart.length
+let cartList = [];
 
-      for (let i = 0; i < l; i++) {
-    let cartList = cart[i];
-    let item = Object.keys(cart)[0];
-    let price = cartList[item];
+for (let i = 0; i < l; i++) {
+let cartList = cart[i];
+let item = Object.keys(cartList)[0];
+let price = cartList[item];
 
-    cartList.push(`${item} at $${price}`);
-  }
-  switch(cartList.length) {
-    case 1:
-      break;
-    case 2:
-      cartList = cartList.join(" and ");
-      break;
-    default:
-      cartList[l-1] = "and ".concat(cartList[l-1]);
-      cartList = cartList.join(", ");
-  }
-
-  console.log(`In your cart, you have ${cartList}.`);
+cartList.push(`${item} at \$${price}`);
 }
 
+switch(cartList.length) {
+case 1:
+break;
+case 2:
+cartList = cartList.join(" and ");
+break;
+default:
+cartList[l-1] = "and ".concat(cartList[l-1]);
+cartList = cartList.join(", ");
+}
+
+console.log(`In your cart, you have ${cartList}.`);
+}
 
 /*
       var itemContents = [];

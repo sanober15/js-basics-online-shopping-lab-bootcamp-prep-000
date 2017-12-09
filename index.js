@@ -38,7 +38,7 @@ function viewCart() {
     let item = Object.keys(cartList)[0];
     let price = cartList[item];
 
-    cartList = cartList.push(`${item} at $${price}`);
+    cartList.push(`${item} at \$${price}`);
   }
   switch(cartList.length) {
     case 1:
@@ -49,11 +49,12 @@ function viewCart() {
     default:
       cartList[l-1] = "and ".concat(cartList[l-1]);
       cartList = cartList.join(", ");
-  
+
 
   console.log(`In your cart, you have ${cartList}.`);
 }
 }
+
 
 /*
       var itemContents = [];

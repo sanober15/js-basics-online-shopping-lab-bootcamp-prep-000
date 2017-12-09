@@ -30,7 +30,7 @@ function viewCart() {
   if (cart.length <= 0) {
         console.log("Your shopping cart is empty.");
     }
-
+const l = cart.length;
       let cartList = [];
 
       for (let i = 0; i < l; i++) {

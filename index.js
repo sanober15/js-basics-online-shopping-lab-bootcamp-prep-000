@@ -31,7 +31,7 @@ function viewCart() {
         console.log("Your shopping cart is empty.");
     }else {
       let itemsAndPrices = [];
-      
+
       function viewCart() {
         // write your code here
         if (cart.length <= 0) {

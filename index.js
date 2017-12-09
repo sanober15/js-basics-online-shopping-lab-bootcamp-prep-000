@@ -33,7 +33,7 @@ function viewCart() {
     
       let cartList = [];
 
-  for (let i = 0; i < l; i++) {
+      for (let i = 0; i < l; i++) {
     let cartList = cart[i];
     let cartList = Object.keys(itemAndPrice)[0];
     let price = cartList[item];
@@ -52,7 +52,7 @@ function viewCart() {
   }
 
   console.log(`In your cart, you have ${cartList}.`);
-}}
+}
 
 
 /*

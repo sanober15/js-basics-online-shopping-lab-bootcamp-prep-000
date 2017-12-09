@@ -31,7 +31,7 @@ function viewCart() {
         console.log("Your shopping cart is empty.");
     }else {
       let cartList = [];
-
+      const l = cart.length;
   for (let i = 0; i < l; i++) {
     let cartList = cart[i];
     let item = Object.keys(cartList)[0];
